@@ -90,8 +90,8 @@ Note: You may want to adjust the CUDA version [according to your driver version]
   #Install diffusers
   pip install diffusers["torch"] transformers
 
-  #Install Gradio
   pip install gradio
+  pip install imageio
   ```
 
 ### 2. Install dependencies
