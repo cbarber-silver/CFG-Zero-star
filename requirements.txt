@@ -1,0 +1,11 @@
+git+https://github.com/huggingface/diffusers.git@main
+transformers
+gradio
+click
+einops
+moviepy
+sentencepiece
+Pillow
+ftfy
+spaces
+
