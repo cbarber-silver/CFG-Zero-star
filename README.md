@@ -46,19 +46,19 @@
 <table class="center">
 <tr>
 
-  <td><img src="assets/repo_teaser.png"> </td> 
+  <td><img src="assets/repo_teaser.jpg"> </td> 
 </tr>
 
 <tr>
-  <td><img src="assets/1_comparison.mp4"> </td>
-  <td><img src="assets/3_comparison.mp4"> </td>
-  <td><img src="assets/4_comparison.mp4"> </td> 
+  <td><img src="assets/1_comparison.gif"> </td>
+  <td><img src="assets/3_comparison.gif"> </td>
+  <td><img src="assets/4_comparison.gif"> </td> 
 </tr>
 
 <tr>
-  <td><img src="assets/7_comparison.mp4"> </td>
-  <td><img src="assets/8_comparison.mp4"> </td>
-  <td><img src="assets/16_comparison.mp4"> </td> 
+  <td><img src="assets/7_comparison.gif"> </td>
+  <td><img src="assets/8_comparison.gif"> </td>
+  <td><img src="assets/16_comparison.gif"> </td> 
 </tr>
 
 </table>
