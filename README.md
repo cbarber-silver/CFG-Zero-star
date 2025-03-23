@@ -54,13 +54,17 @@
 <tr>
   <td><img src="assets/1_comparison.gif"> </td>
   <td><img src="assets/3_comparison.gif"> </td>
-  <td><img src="assets/4_comparison.gif"> </td> 
 </tr>
 
 <tr>
   <td><img src="assets/7_comparison.gif"> </td>
   <td><img src="assets/8_comparison.gif"> </td>
-  <td><img src="assets/16_comparison.gif"> </td> 
+  
+
+
+<tr>
+<td><img src="assets/4_comparison.gif"> </td> 
+<td><img src="assets/16_comparison.gif"> </td> 
 </tr>
 
 </table>
