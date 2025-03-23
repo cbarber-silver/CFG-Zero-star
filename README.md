@@ -48,7 +48,9 @@
 
   <td><img src="assets/repo_teaser.jpg"> </td> 
 </tr>
+</table>
 
+<table class="center">
 <tr>
   <td><img src="assets/1_comparison.gif"> </td>
   <td><img src="assets/3_comparison.gif"> </td>
