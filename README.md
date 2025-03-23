@@ -21,7 +21,8 @@
 
 <div align="center">
                       <a href="">Paper</a> | 
-                      <a href="https://weichenfan.github.io/webpage-cfg-zero-star/">Project Page</a>
+                      <a href="https://weichenfan.github.io/webpage-cfg-zero-star/">Project Page</a> |
+                      <a href="https://huggingface.co/spaces/weepiess2383/CFG-Zero-Star">Demo</a>
 </div>
 
 ---
@@ -43,32 +44,21 @@
 ## :astonished: Gallery
 
 <table class="center">
-
 <tr>
 
-  <td><img src="assets/samples/sample_0_seed3.gif"> </td>
-  <td><img src="assets/samples/sample_1_seed3.gif"> </td>
-  <td><img src="assets/samples/sample_3_seed2.gif"> </td> 
-</tr>
-
-
-        
-<tr>
-  <td><img src="assets/samples/sample_4_seed1.gif"> </td>
-  <td><img src="assets/samples/sample_4_seed4.gif"> </td>
-  <td><img src="assets/samples/sample_5_seed4.gif"> </td>     
+  <td><img src="assets/repo_teaser.png"> </td> 
 </tr>
 
 <tr>
-  <td><img src="assets/samples/sample_6_seed4.gif"> </td>
-  <td><img src="assets/samples/sample_8_seed0.gif"> </td>
-  <td><img src="assets/samples/sample_8_seed2.gif"> </td>      
+  <td><img src="assets/1_comparison.mp4"> </td>
+  <td><img src="assets/3_comparison.mp4"> </td>
+  <td><img src="assets/4_comparison.mp4"> </td> 
 </tr>
 
 <tr>
-  <td><img src="assets/samples/sample_12_seed1.gif"> </td>
-  <td><img src="assets/samples/sample_13_seed3.gif"> </td>
-  <td><img src="assets/samples/sample_14.gif"> </td>    
+  <td><img src="assets/7_comparison.mp4"> </td>
+  <td><img src="assets/8_comparison.mp4"> </td>
+  <td><img src="assets/16_comparison.mp4"> </td> 
 </tr>
 
 </table>
@@ -88,10 +78,13 @@ Note: You may want to adjust the CUDA version [according to your driver version]
   conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.4 -c pytorch -c nvidia
 
   #Install diffusers
-  pip install diffusers["torch"] transformers
+  pip install transformers
+  pip install git+https://github.com/huggingface/diffusers.git@main
+
 
   pip install gradio
   pip install imageio
+  pip install ftfy
   ```
 
 ### 2. Install dependencies
