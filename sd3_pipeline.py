@@ -69,6 +69,7 @@ EXAMPLE_DOC_STRING = """
         ```
 """
 
+@torch.cuda.amp.autocast(dtype=torch.float32)
 def optimized_scale(positive_flat, negative_flat):
 
     # Calculate dot production
@@ -1092,6 +1093,7 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
 
                         alpha = optimized_scale(positive_flat,negative_flat)
                         alpha = alpha.view(batch_size, 1, 1, 1)
+                        alpha = alpha.to(positive_flat.dtype)
 
                         if (i <= zero_steps) and use_zero_init:
                             noise_pred = noise_pred_text*0.
@@ -1125,7 +1127,6 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
                 # compute the previous noisy sample x_t -> x_t-1
                 latents_dtype = latents.dtype
                 latents = self.scheduler.step(noise_pred, t, latents, return_dict=False)[0]
-                # latents = noise_pred
 
                 if latents.dtype != latents_dtype:
                     if torch.backends.mps.is_available():
