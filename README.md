@@ -38,7 +38,7 @@
 
 
 ## 🔥 Update and News
-- [2025.03.17] 🔥 TBD
+- [2025.03.25] 🔥 Paper|Demo|Code have been officially released.
 
 
 ## :astonished: Gallery
