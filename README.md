@@ -83,7 +83,6 @@ Note: You may want to adjust the CUDA version [according to your driver version]
   #Install pytorch according to your cuda version
   conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.4 -c pytorch -c nvidia
 
-  pip install -r requirements.txt
   ```
 
 ### 2. Install dependencies
