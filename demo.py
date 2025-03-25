@@ -135,7 +135,7 @@ demo = gr.Interface(
         gr.Dropdown(choices=list(model_paths.keys()), label="Choose Model"),
         gr.Slider(1, 20, value=4.0, step=0.5, label="Guidance Scale"),
         gr.Slider(10, 100, value=28, step=5, label="Inference Steps"),
-        gr.Checkbox(value=True, label="Use CFG Zero Star"),
+        gr.Checkbox(value=True, label="Use Optimized-Scale"),
         gr.Checkbox(value=True, label="Use Zero Init"),
         gr.Slider(0, 20, value=0, step=1, label="Zero out steps"),
         gr.Number(value=42, label="Seed (Leave blank for random)"),
