@@ -63,16 +63,21 @@ def generate_content(prompt, model_name, guidance_scale=7.5, num_inference_steps
 
     is_video_model = "wan-t2v" in model_name
 
+    negative_prompt = "Bright tones, overexposed, static, blurred details, subtitles, style, works, paintings, images, static, overall gray, worst quality, low quality, JPEG compression residue, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn faces, deformed, disfigured, misshapen limbs, fused fingers, still picture, messy background, three legs, many people in the background, walking backwards"
+
     if is_video_model:
         if True:
             set_seed(seed)
             video1_frames = model(
                 prompt=prompt,
-                guidance_scale=guidance_scale,
+                negative_prompt=negative_prompt,
+                height=480,
+                width=832,
                 num_frames=81,
+                guidance_scale=guidance_scale,
                 use_cfg_zero_star=True,
-                use_zero_init=use_zero_init,
-                zero_steps=zero_steps
+                use_zero_init=True,
+                zero_steps=0
             ).frames[0]
             video1_path = os.path.join(OUTPUT_DIR, f"{seed}_CFG-Zero-Star.mp4")
             export_to_video(video1_frames, video1_path, fps=16)
@@ -80,11 +85,14 @@ def generate_content(prompt, model_name, guidance_scale=7.5, num_inference_steps
             set_seed(seed)
             video2_frames = model(
                 prompt=prompt,
-                guidance_scale=guidance_scale,
+                negative_prompt=negative_prompt,
+                height=480,
+                width=832,
                 num_frames=81,
+                guidance_scale=guidance_scale,
                 use_cfg_zero_star=False,
-                use_zero_init=use_zero_init,
-                zero_steps=zero_steps
+                use_zero_init=False,
+                zero_steps=0
             ).frames[0]
             video2_path = os.path.join(OUTPUT_DIR,  f"{seed}_CFG.mp4")
             export_to_video(video2_frames, video2_path, fps=16)
@@ -135,7 +143,7 @@ demo = gr.Interface(
         gr.Dropdown(choices=list(model_paths.keys()), label="Choose Model"),
         gr.Slider(1, 20, value=4.0, step=0.5, label="Guidance Scale"),
         gr.Slider(10, 100, value=28, step=5, label="Inference Steps"),
-        gr.Checkbox(value=True, label="Use Optimized-Scale"),
+        gr.Checkbox(value=True, label="Use CFG Zero Star"),
         gr.Checkbox(value=True, label="Use Zero Init"),
         gr.Slider(0, 20, value=0, step=1, label="Zero out steps"),
         gr.Number(value=42, label="Seed (Leave blank for random)"),
