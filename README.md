@@ -102,7 +102,15 @@ python demo.py
 
 ## BibTex
 ```
-
+@misc{fan2025cfgzerostar,
+      title={CFG-Zero*: Improved Classifier-Free Guidance for Flow Matching Models}, 
+      author={Weichen Fan and Amber Yijia Zheng and Raymond A. Yeh and Ziwei Liu},
+      year={2025},
+      eprint={2503.18886},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2503.18886}, 
+}
 ```
 
 ## 🔑 License
