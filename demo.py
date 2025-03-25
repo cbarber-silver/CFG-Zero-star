@@ -138,7 +138,7 @@ def generate_content(prompt, model_name, guidance_scale=7.5, num_inference_steps
 demo = gr.Interface(
     fn=generate_content,
     inputs=[
-        gr.Textbox(value="A capybara holding a sign that reads Hello World", label="Enter your prompt"),
+        gr.Textbox(value="A spooky haunted mansion on a hill silhouetted by a full moon.", label="Enter your prompt"),
         gr.Dropdown(choices=list(model_paths.keys()), label="Choose Model"),
         gr.Slider(1, 20, value=4.0, step=0.5, label="Guidance Scale"),
         gr.Slider(10, 100, value=28, step=5, label="Inference Steps"),
