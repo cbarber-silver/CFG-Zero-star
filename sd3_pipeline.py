@@ -1169,3 +1169,4 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
             return (image,)
 
         return StableDiffusion3PipelineOutput(images=image)
+

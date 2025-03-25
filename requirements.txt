@@ -1,3 +1,4 @@
+accelerate
 git+https://github.com/huggingface/diffusers.git@main
 transformers
 gradio
@@ -8,4 +9,4 @@ sentencepiece
 Pillow
 ftfy
 spaces
-
+protobuf

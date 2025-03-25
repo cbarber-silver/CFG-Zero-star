@@ -12,6 +12,9 @@ from wan_pipeline import WanPipeline
 from diffusers.schedulers.scheduling_unipc_multistep import UniPCMultistepScheduler
 from PIL import Image
 from diffusers.utils import export_to_video
+import spaces
+
+os.environ["HF_HUB_DOWNLOAD_TIMEOUT"] = "3000"
 
 def set_seed(seed):
     random.seed(seed)
@@ -51,6 +54,7 @@ def load_model(model_name):
     
     return current_model
 
+@spaces.GPU(duration=2000)
 def generate_content(prompt, model_name, guidance_scale=7.5, num_inference_steps=50, use_cfg_zero_star=True, use_zero_init=True, zero_steps=0, seed=None, compare_mode=False):
     model = load_model(model_name)
     if seed is None:
@@ -60,7 +64,7 @@ def generate_content(prompt, model_name, guidance_scale=7.5, num_inference_steps
     is_video_model = "wan-t2v" in model_name
 
     if is_video_model:
-        if compare_mode:
+        if True:
             set_seed(seed)
             video1_frames = model(
                 prompt=prompt,
@@ -86,17 +90,6 @@ def generate_content(prompt, model_name, guidance_scale=7.5, num_inference_steps
             export_to_video(video2_frames, video2_path, fps=16)
 
             return None, None, video1_path, video2_path, seed
-        else:
-            video_frames = model(
-                prompt=prompt,
-                guidance_scale=guidance_scale,
-                num_frames=81,
-                use_cfg_zero_star=use_cfg_zero_star,
-                use_zero_init=use_zero_init,
-                zero_steps=zero_steps
-            ).frames[0]
-            video_path = save_video(video_frames, f"{seed}.mp4")
-            return None, None, video_path, None, seed
 
     if compare_mode:
         set_seed(seed)
@@ -159,3 +152,4 @@ demo = gr.Interface(
 )
 
 demo.launch(server_name="127.0.0.1", server_port=7860)
+

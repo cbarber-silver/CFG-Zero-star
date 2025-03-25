@@ -71,7 +71,7 @@ EXAMPLE_DOC_STRING = """
         >>> export_to_video(output, "output.mp4", fps=16)
         ```
 """
-
+@torch.cuda.amp.autocast(dtype=torch.float32)
 def optimized_scale(positive_flat, negative_flat):
 
     # Calculate dot production
@@ -561,6 +561,7 @@ class WanPipeline(DiffusionPipeline, WanLoraLoaderMixin):
                         alpha = optimized_scale(positive_flat,negative_flat)
                         alpha = alpha.view(batch_size, 1, 1, 1)
 
+
                         if (i <= zero_steps) and use_zero_init:
                             noise_pred = noise_pred_text*0.
                         else:
@@ -614,3 +615,4 @@ class WanPipeline(DiffusionPipeline, WanLoraLoaderMixin):
             return (video,)
 
         return WanPipelineOutput(frames=video)
+
