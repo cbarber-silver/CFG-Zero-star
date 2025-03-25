@@ -20,7 +20,7 @@
 </p>
 
 <div align="center">
-                      <a href="">Paper</a> | 
+                      <a href="https://arxiv.org/abs/2503.18886">Paper</a> | 
                       <a href="https://weichenfan.github.io/webpage-cfg-zero-star/">Project Page</a> |
                       <a href="https://huggingface.co/spaces/weepiess2383/CFG-Zero-Star">Demo</a>
 </div>
