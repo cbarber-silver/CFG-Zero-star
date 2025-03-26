@@ -35,7 +35,7 @@
 
 
 
-
+⚡️ [Huggingface demo](https://huggingface.co/spaces/weepiess2383/CFG-Zero-Star) now supports text-to-image generation with SD3 and SD3.5.
 
 ## 🔥 Update and News
 - [2025.03.26] 🔥 Supported by [Wan2.1GP](https://github.com/deepbeepmeep/Wan2GP) now! 
