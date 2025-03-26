@@ -38,7 +38,8 @@
 
 
 ## 🔥 Update and News
-- [2025.03.25] 🔥 Paper|Demo|Code have been officially released.
+- [2025.03.26] 🔥 Supported by [Wan2.1GP](https://github.com/deepbeepmeep/Wan2GP) now! 
+- [2025.03.25] Paper|Demo|Code have been officially released.
 
 
 ## :astonished: Gallery
