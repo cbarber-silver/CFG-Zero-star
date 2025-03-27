@@ -40,7 +40,8 @@
 💰 Bonus tip: You can even use pure zero-init (zeroing out the prediction of the first step) as a quick test—if it improves your flow-matching model a lot, it might not be fully trained yet.
 
 ## 🔥 Update and News
-- [2025.3.27] 🔥 Supported by [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) now!
+- [2025.3.28] 🔥 Wan2.1-14B T2V is now supported! (Note: The default setting has been updated to zero out 4% of total steps for this scenario.)
+- [2025.3.27] 📙 Supported by [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) now!
 - [2025.03.26] 📙 Supported by [Wan2.1GP](https://github.com/deepbeepmeep/Wan2GP) now! 
 - [2025.03.25] Paper|Demo|Code have been officially released.
 
