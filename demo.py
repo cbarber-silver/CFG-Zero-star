@@ -77,7 +77,7 @@ def generate_content(prompt, model_name, guidance_scale=7.5, num_inference_steps
                 guidance_scale=guidance_scale,
                 use_cfg_zero_star=True,
                 use_zero_init=True,
-                zero_steps=0
+                zero_steps=zero_steps
             ).frames[0]
             video1_path = os.path.join(OUTPUT_DIR, f"{seed}_CFG-Zero-Star.mp4")
             export_to_video(video1_frames, video1_path, fps=16)
