@@ -110,7 +110,7 @@ Simply run the following command to generate videos in the output folder. Noted 
 python models/wan/video_infer.py
 ~~~
 
-The results shown below are all generated with this script.
+All results shown below were generated using this script on an H100 80G GPU.
 <table class="center">
 
   <!-- Pair 1 -->
