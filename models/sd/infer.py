@@ -29,5 +29,5 @@ image = pipe(
     use_zero_init=True,
     zero_steps=0
 ).images[0]
-image.save("capybara_scale_ours.png")
+image.save("output/capybara_scale_ours.png")
 
