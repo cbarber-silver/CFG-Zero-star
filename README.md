@@ -113,51 +113,73 @@ python models/wan/video_infer.py
 The results shown below are all generated with this script.
 <table class="center">
 
-  <!-- First Row of GIFs -->
+  <!-- Pair 1 -->
   <tr>
-    <td><img src="assets/wan2.1/1322140014_base.gif"></td>
-    <td><img src="assets/wan2.1/1322140014_ours.gif"></td>
-    <td><img src="assets/wan2.1/1306980124_base.gif"></td>
-    <td><img src="assets/wan2.1/1306980124_ours.gif"></td>
+    <td><img src="assets/wan2.1/1322140014_base.gif" style="width:416px; height:auto;"></td>
+    <td><img src="assets/wan2.1/1322140014_ours.gif" style="width:416px; height:auto;"></td>
   </tr>
-  
-  <!-- Labels: CFG / CFG-Zero* -->
   <tr>
     <td align="center"><b>CFG</b></td>
     <td align="center"><b>CFG-Zero*</b></td>
-    <td align="center"><b>CFG</b></td>
-    <td align="center"><b>CFG-Zero*</b></td>
   </tr>
-  
-  <!-- Prompt + Seed -->
   <tr>
-    <td colspan="2"><b>Prompt:</b> "A cat walks on the grass, realistic"<br><b>Seed:</b> 1322140014</td>
-    <td colspan="2"><b>Prompt:</b> "a dynamic interaction between the ocean and a large rock. The rock, with its rough texture and jagged edges, is partially submerged in the water, suggesting it is a natural feature of the coastline. The water around the rock is in motion, with white foam and waves crashing against the rock, indicating the force of the ocean's movement. The background is a vast expanse of the ocean, with small ripples and waves, suggesting a moderate sea state. The overall style of the scene is a realistic depiction of a natural landscape, with a focus on the interplay between the rock and the water."<br><b>Seed:</b> 1306980124</td>
+    <td colspan="2">
+      <b>Prompt:</b> "A cat walks on the grass, realistic"<br>
+      <b>Seed:</b> 1322140014
+    </td>
   </tr>
 
-  <!-- Second Row of GIFs -->
+  <!-- Pair 2 -->
   <tr>
-    <td><img src="assets/wan2.1/1270611998_base.gif"></td>
-    <td><img src="assets/wan2.1/1270611998_ours.gif"></td>
-    <td><img src="assets/wan2.1/158241056_base.gif"></td>
-    <td><img src="assets/wan2.1/158241056_ours.gif"></td>
+    <td><img src="assets/wan2.1/1306980124_base.gif" style="width:416px; height:auto;"></td>
+    <td><img src="assets/wan2.1/1306980124_ours.gif" style="width:416px; height:auto;"></td>
   </tr>
-
-  <!-- Labels -->
   <tr>
     <td align="center"><b>CFG</b></td>
     <td align="center"><b>CFG-Zero*</b></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Prompt:</b> "A dynamic interaction between the ocean and a large rock. The rock, with its rough texture and jagged edges, is partially submerged in the water, suggesting it is a natural feature of the coastline. The water around the rock is in motion, with white foam and waves crashing against the rock, indicating the force of the ocean's movement. The background is a vast expanse of the ocean, with small ripples and waves, suggesting a moderate sea state. The overall style of the scene is a realistic depiction of a natural landscape, with a focus on the interplay between the rock and the water."<br>
+      <b>Seed:</b> 1306980124
+    </td>
+  </tr>
+
+  <!-- Pair 3 -->
+  <tr>
+    <td><img src="assets/wan2.1/1270611998_base.gif" style="width:416px; height:auto;"></td>
+    <td><img src="assets/wan2.1/1270611998_ours.gif" style="width:416px; height:auto;"></td>
+  </tr>
+  <tr>
     <td align="center"><b>CFG</b></td>
     <td align="center"><b>CFG-Zero*</b></td>
   </tr>
-
-  <!-- Prompt + Seed -->
   <tr>
-    <td colspan="2"><b>Prompt:</b> "A stylish woman walks down a Tokyo street filled with warm glowing neon and animated city signage. She wears a black leather jacket, a long red dress, and black boots, and carries a black purse. She wears sunglasses and red lipstick. She walks confidently and casually. The street is damp and reflective, creating a mirror effect of the colorful lights. Many pedestrians walk about."<br><b>Seed:</b> 1270611998</td>
-    <td colspan="2"><b>Prompt:</b> "The camera follows behind a white vintage SUV with a black roof rack as it speeds up a steep dirt road surrounded by pine trees on a steep mountain slope, dust kicks up from it’s tires, the sunlight shines on the SUV as it speeds along the dirt road, casting a warm glow over the scene. The dirt road curves gently into the distance, with no other cars or vehicles in sight. The trees on either side of the road are redwoods, with patches of greenery scattered throughout. The car is seen from the rear following the curve with ease, making it seem as if it is on a rugged drive through the rugged terrain. The dirt road itself is surrounded by steep hills and mountains, with a clear blue sky above with wispy clouds."<br><b>Seed:</b> 2023</td>
+    <td colspan="2">
+      <b>Prompt:</b> "A stylish woman walks down a Tokyo street filled with warm glowing neon and animated city signage. She wears a black leather jacket, a long red dress, and black boots, and carries a black purse. She wears sunglasses and red lipstick. She walks confidently and casually. The street is damp and reflective, creating a mirror effect of the colorful lights. Many pedestrians walk about."<br>
+      <b>Seed:</b> 1270611998
+    </td>
+  </tr>
+
+  <!-- Pair 4 -->
+  <tr>
+    <td><img src="assets/wan2.1/158241056_base.gif" style="width:416px; height:auto;"></td>
+    <td><img src="assets/wan2.1/158241056_ours.gif" style="width:416px; height:auto;"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>CFG</b></td>
+    <td align="center"><b>CFG-Zero*</b></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Prompt:</b> "The camera follows behind a white vintage SUV with a black roof rack as it speeds up a steep dirt road surrounded by pine trees on a steep mountain slope, dust kicks up from it’s tires, the sunlight shines on the SUV as it speeds along the dirt road, casting a warm glow over the scene. The dirt road curves gently into the distance, with no other cars or vehicles in sight. The trees on either side of the road are redwoods, with patches of greenery scattered throughout. The car is seen from the rear following the curve with ease, making it seem as if it is on a rugged drive through the rugged terrain. The dirt road itself is surrounded by steep hills and mountains, with a clear blue sky above with wispy clouds."<br>
+      <b>Seed:</b> 2023
+    </td>
   </tr>
 
 </table>
+
+
 
 ## BibTex
 ```
