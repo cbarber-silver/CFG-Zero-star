@@ -45,6 +45,16 @@
 - [2025.03.26] 📙 Supported by [Wan2.1GP](https://github.com/deepbeepmeep/Wan2GP) now! 
 - [2025.03.25] Paper|Demo|Code have been officially released.
 
+## 📑 Todo List
+- Wan2.1 
+    - [x] 14B Text-to-Video
+    - [ ] 14B Image-to-Video
+- SD3/SD3.5
+    - [x] Text-to-Image
+    - [ ] Image-to-Image
+- Lumina
+    - [ ] Lumina-Next
+    - [ ] Lumina-Image-2.0
 
 ## :astonished: Gallery
 
