@@ -51,7 +51,7 @@
 ## 📑 Todo List
 - Wan2.1 
     - [x] 14B Text-to-Video
-    - [ ] 14B Image-to-Video
+    - [x] 14B Image-to-Video
 - SD3/SD3.5
     - [x] Text-to-Image
     - [ ] Image-to-Image
@@ -63,29 +63,30 @@
 
 <table class="center">
 <tr>
-
   <td><img src="assets/repo_teaser.jpg"> </td> 
 </tr>
 </table>
 
-<table class="center">
-<tr>
-  <td><img src="assets/1_comparison.gif"> </td>
-  <td><img src="assets/3_comparison.gif"> </td>
-</tr>
+<details>
+  <summary style="font-size: 18px; cursor: pointer; margin-top: 10px;">▶ Click to expand comparison GIFs</summary>
 
-<tr>
-  <td><img src="assets/7_comparison.gif"> </td>
-  <td><img src="assets/8_comparison.gif"> </td>
-  
+  <table class="center" style="margin-top: 10px;">
+    <tr>
+      <td><img src="assets/1_comparison.gif"></td>
+      <td><img src="assets/3_comparison.gif"></td>
+    </tr>
+    <tr>
+      <td><img src="assets/7_comparison.gif"></td>
+      <td><img src="assets/8_comparison.gif"></td>
+    </tr>
+    <tr>
+      <td><img src="assets/4_comparison.gif"></td>
+      <td><img src="assets/16_comparison.gif"></td>
+    </tr>
+  </table>
 
+</details>
 
-<tr>
-<td><img src="assets/4_comparison.gif"> </td> 
-<td><img src="assets/16_comparison.gif"> </td> 
-</tr>
-
-</table>
 
 
 ## Installation
