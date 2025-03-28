@@ -39,6 +39,8 @@
 
 💰 Bonus tip: You can even use pure zero-init (zeroing out the prediction of the first step) as a quick test—if it improves your flow-matching model a lot, it might not be fully trained yet.
 
+**🧪 Usage Tip: Use both optimized-scale and zero-init together. Adjust the zero-init steps based on total inference steps — 4% is generally a good starting point.**
+
 ## 🔥 Update and News
 - [2025.3.28] 🔥 Wan2.1-14B T2V is now supported! (Note: The default setting has been updated to zero out 4% of total steps for this scenario.)
 - [2025.3.27] 📙 Supported by [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) now!
@@ -189,6 +191,36 @@ All results shown below were generated using this script on an H100 80G GPU.
   </tr>
 
 </table>
+
+#### a. Image-to-Video Generation
+Follow Wan2.1 to clone the repo and finish the installation, then copy 'models/wan/image2video_cfg_zero_star.py' in this repo to the Wan2.1 repo (Wan2.1/wan). Modify 'Wan2.1/wan/__init__.py': replace 'from .image2video import WanI2V' with 'from .image2video_cfg_zero_star import WanI2V'.
+
+~~~bash
+python generate.py --task i2v-14B --size 832*480 --ckpt_dir ./Wan2.1-I2V-14B-480P --image examples/i2v_input.JPG --prompt "Summer beach vacation style, a white cat wearing sunglasses sits on a surfboard. The fluffy-furred feline gazes directly at the camera with a relaxed expression. Blurred beach scenery forms the background featuring crystal-clear waters, distant green hills, and a blue sky dotted with white clouds. The cat assumes a naturally relaxed posture, as if savoring the sea breeze and warm sunlight. A close-up shot highlights the feline's intricate details and the refreshing atmosphere of the seaside." --base_seed 0
+~~~
+
+All results shown below were generated using this script on an H100 80G GPU.
+<table class="center">
+
+  <tr>
+    <td><img src="assets/wan2.1/i2v_input.JPG" style="width:410px; height:auto;"></td>
+    <td><img src="assets/wan2.1/I2V_CFG.gif" style="width:410px; height:auto;"></td>
+    <td><img src="assets/wan2.1/I2V_Ours.gif" style="width:410px; height:auto;"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Input Image</b></td>
+    <td align="center"><b>CFG</b></td>
+    <td align="center"><b>CFG-Zero*</b></td>
+  </tr>
+  <tr>
+    <td colspan="3">
+      <b>Prompt:</b> "Summer beach vacation style, a white cat wearing sunglasses sits on a surfboard. The fluffy-furred feline gazes directly at the camera with a relaxed expression. Blurred beach scenery forms the background featuring crystal-clear waters, distant green hills, and a blue sky dotted with white clouds. The cat assumes a naturally relaxed posture, as if savoring the sea breeze and warm sunlight. A close-up shot highlights the feline's intricate details and the refreshing atmosphere of the seaside."<br>
+      <b>Seed:</b> 0
+    </td>
+  </tr>
+
+</table>
+
 
 ## Easy Implementation
 You can use this script to easily apply our method to any flow-matching-based model.
