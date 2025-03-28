@@ -180,7 +180,40 @@ All results shown below were generated using this script on an H100 80G GPU.
 
 </table>
 
+## Easy Implementation
+You can use this script to easily apply our method to any flow-matching-based model.
+~~~python
+def optimized_scale(positive_flat, negative_flat):
+  # Calculate dot production
+  dot_product = torch.sum(positive_flat * negative_flat, dim=1, keepdim=True)
 
+  # Squared norm of uncondition
+  squared_norm = torch.sum(negative_flat ** 2, dim=1, keepdim=True) + 1e-8
+
+  # st_star = v_condˆT * v_uncond / ||v_uncond||ˆ2
+  st_star = dot_product / squared_norm
+  return st_star
+
+# Get the velocity prediction
+noise_pred_uncond, noise_pred_text = model(...)
+positive = noise_pred_text.view(Batchsize,-1)
+negative = noise_pred_uncond.view(Batchsize,-1)
+
+# Calculate the optimized scale
+st_star = optimized_scale(positive,negative)
+
+# Reshape for broadcasting
+st_star = st_star.view(Batchsize, 1, 1, 1)
+
+# Perform CFG-Zero* sampling
+if sample_step == 0:
+  # Perform zero init
+  noise_pred = noise_pred_uncond * 0.
+else:
+  # Perform optimized scale
+  noise_pred = noise_pred_uncond * st_star + \
+  guidance_scale * (noise_pred_text - noise_pred_uncond * st_star)
+~~~
 
 ## BibTex
 ```
