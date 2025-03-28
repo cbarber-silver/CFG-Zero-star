@@ -108,7 +108,7 @@ python demo.py
 #### a. Text-to-Video Generation
 Simply run the following command to generate videos in the output folder. Noted that the current version is using Wan-AI/Wan2.1-T2V-14B-Diffusers with the default setting.
 ~~~bash
-python models/wan/video_infer.py
+python models/wan/T2V_infer.py
 ~~~
 
 All results shown below were generated using this script on an H100 80G GPU.
