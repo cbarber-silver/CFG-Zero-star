@@ -1092,7 +1092,7 @@ class StableDiffusion3Pipeline(DiffusionPipeline, SD3LoraLoaderMixin, FromSingle
                         negative_flat = noise_pred_uncond.view(batch_size, -1)  
 
                         alpha = optimized_scale(positive_flat,negative_flat)
-                        alpha = alpha.view(batch_size, 1, 1, 1)
+                        alpha = alpha.view(batch_size, *([1] * (len(noise_pred_text.shape) - 1)))
                         alpha = alpha.to(positive_flat.dtype)
 
                         if (i <= zero_steps) and use_zero_init:

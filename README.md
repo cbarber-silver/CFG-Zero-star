@@ -213,7 +213,7 @@ negative = noise_pred_uncond.view(Batchsize,-1)
 st_star = optimized_scale(positive,negative)
 
 # Reshape for broadcasting
-st_star = st_star.view(Batchsize, 1, 1, 1)
+st_star = st_star.view(batch_size, *([1] * (len(noise_pred_text.shape) - 1)))
 
 # Perform CFG-Zero* sampling
 if sample_step == 0:
