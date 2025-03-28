@@ -42,7 +42,8 @@
 **🧪 Usage Tip: Use both optimized-scale and zero-init together. Adjust the zero-init steps based on total inference steps — 4% is generally a good starting point.**
 
 ## 🔥 Update and News
-- [2025.3.28] 🔥 Wan2.1-14B T2V is now supported! (Note: The default setting has been updated to zero out 4% of total steps for this scenario.)
+- [2025.3.29] 🔥 Both Wan2.1-14B I2V & T2V are now supported! 
+- [2025.3.28] Wan2.1-14B T2V is now supported! (Note: The default setting has been updated to zero out 4% of total steps for this scenario.)
 - [2025.3.27] 📙 Supported by [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) now!
 - [2025.03.26] 📙 Supported by [Wan2.1GP](https://github.com/deepbeepmeep/Wan2GP) now! 
 - [2025.03.25] Paper|Demo|Code have been officially released.
