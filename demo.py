@@ -1,5 +1,5 @@
 import gradio as gr
-from sd3_pipeline import StableDiffusion3Pipeline
+from models.sd.sd3_pipeline import StableDiffusion3Pipeline
 import torch
 import random
 import numpy as np
@@ -8,7 +8,7 @@ import gc
 import tempfile
 import imageio
 from diffusers import AutoencoderKLWan
-from wan_pipeline import WanPipeline
+from models.wan.wan_pipeline import WanPipeline
 from diffusers.schedulers.scheduling_unipc_multistep import UniPCMultistepScheduler
 from PIL import Image
 from diffusers.utils import export_to_video
