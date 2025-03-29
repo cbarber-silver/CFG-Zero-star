@@ -221,6 +221,23 @@ All results shown below were generated using this script on an H100 80G GPU.
     </td>
   </tr>
 
+  <tr>
+    <td><img src="assets/wan2.1/i2v_input.JPG" style="width:410px; height:auto;"></td>
+    <td><img src="assets/wan2.1/i2v-14B_832*480_cfg_3549111921.gif" style="width:410px; height:auto;"></td>
+    <td><img src="assets/wan2.1/i2v-14B_832*480_ours_3549111921.gif" style="width:410px; height:auto;"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Input Image</b></td>
+    <td align="center"><b>CFG</b></td>
+    <td align="center"><b>CFG-Zero*</b></td>
+  </tr>
+  <tr>
+    <td colspan="3">
+      <b>Prompt:</b> "Summer beach vacation style. A white cat wearing sunglasses lounges confidently on a surfboard, gently bobbing with the ocean waves under the bright sun. The cat exudes a cool, laid-back attitude. After a moment, it casually reaches into a small bag, pulls out a cigarette, and lights it. A thin stream of smoke drifts into the salty breeze as the cat takes a slow drag, maintaining its nonchalant pose beneath the clear blue sky."
+      <br>
+      <b>Seed:</b> 3549111921
+    </td>
+  </tr>
 </table>
 
 
