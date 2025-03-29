@@ -194,7 +194,7 @@ All results shown below were generated using this script on an H100 80G GPU.
 
 </table>
 
-#### a. Image-to-Video Generation
+#### b. Image-to-Video Generation
 Follow Wan2.1 to clone the repo and finish the installation, then copy 'models/wan/image2video_cfg_zero_star.py' in this repo to the Wan2.1 repo (Wan2.1/wan). Modify 'Wan2.1/wan/__init__.py': replace 'from .image2video import WanI2V' with 'from .image2video_cfg_zero_star import WanI2V'.
 
 ~~~bash
