@@ -64,11 +64,16 @@
 
 ## :astonished: Gallery
 
+<details>
+  <summary style="font-size: 18px; cursor: pointer; margin-top: 10px;">▶ Click to expand comparison Images</summary>
+
 <table class="center">
 <tr>
   <td><img src="assets/repo_teaser.jpg"> </td> 
 </tr>
 </table>
+</details>
+
 
 <details>
   <summary style="font-size: 18px; cursor: pointer; margin-top: 10px;">▶ Click to expand comparison GIFs</summary>
