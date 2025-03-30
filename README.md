@@ -353,7 +353,7 @@ else:
 
 ## 🔑 License
 
-This code is licensed under Apache-2.0. The framework is fully open for academic research and also allows free commercial usage.
+This code is licensed under Apache-2.0. The framework is fully open for academic research and also allows any commercial usage.
 
 
 ## Disclaimer
