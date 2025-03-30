@@ -42,7 +42,8 @@
 **🧪 Usage Tip: Use both optimized-scale and zero-init together. Adjust the zero-init steps based on total inference steps — 4% is generally a good starting point.**
 
 ## 🔥 Update and News
-- [2025.3.29] 🔥 Flux is officially supported now!
+- [2025.3.30] 🔥 Hunyuan is officially supported now!
+- [2025.3.29] Flux is officially supported now!
 - [2025.3.29] Both Wan2.1-14B I2V & T2V are now supported! 
 - [2025.3.28] Wan2.1-14B T2V is now supported! (Note: The default setting has been updated to zero out 4% of total steps for this scenario.)
 - [2025.3.27] 📙 Supported by [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) now!
@@ -53,6 +54,8 @@
 - Wan2.1 
     - [x] 14B Text-to-Video
     - [x] 14B Image-to-Video
+- Hunyuan 
+    - [x] Text-to-Video
 - SD3/SD3.5
     - [x] Text-to-Image
     - [ ] Image-to-Image
@@ -270,6 +273,32 @@ python models/flux/Guidance_distilled.py
     <td colspan="2">
       <b>Prompt:</b> "a tiny astronaut hatching from an egg on the moon."<br>
       <b>Seed:</b> 105297965
+    </td>
+  </tr>
+</table>
+
+### 3. Hunyuan
+We used **hunyuanvideo-community/HunyuanVideo** for the following experiment.
+Since this model is guidance-distilled, we applied only zero-init from our CFG-Zero* method.
+All images below were generated with the same seed on an H100 80G GPU.
+
+~~~bash
+python models/hunyuan/t2v.py
+~~~
+
+<table class="center">
+  <tr>
+    <td><img src="assets/hunyuan/376559893_output_cfg.gif"></td>
+    <td><img src="assets/hunyuan/376559893_output_ours.gif"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>CFG</b></td>
+    <td align="center"><b>CFG-Zero*</b></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Prompt:</b> "In an ornate, historical hall, a massive tidal wave peaks and begins to crash. A man is surfing, cinematic film shot in 35mm. High quality, high defination."<br>
+      <b>Seed:</b> 376559893
     </td>
   </tr>
 </table>
