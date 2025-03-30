@@ -61,6 +61,7 @@
     - [ ] Image-to-Image
 - Flux
     - [x] Text-to-Image (Guidance-distilled version)
+    - [x] Lora
 - Lumina
     - [ ] Lumina-Next
     - [ ] Lumina-Image-2.0
@@ -252,6 +253,7 @@ All results shown below were generated using this script on an H100 80G GPU.
 </table>
 
 ### 2. Flux
+#### a. Text-to-Image Generation
 We used **black-forest-labs/FLUX.1-dev** for the following experiment.
 Since this model is guidance-distilled, we applied only zero-init from our CFG-Zero* method.
 All images below were generated with the same seed on an H100 80G GPU.
@@ -273,6 +275,49 @@ python models/flux/Guidance_distilled.py
     <td colspan="2">
       <b>Prompt:</b> "a tiny astronaut hatching from an egg on the moon."<br>
       <b>Seed:</b> 105297965
+    </td>
+  </tr>
+</table>
+
+#### b. Lora
+We used **black-forest-labs/FLUX.1-dev** with different loras for the following experiment.
+Since this model is guidance-distilled, we applied only zero-init from our CFG-Zero* method.
+All images below were generated with the same seed on an H100 80G GPU.
+
+~~~bash
+python models/flux/infer_lora.py
+~~~
+
+<table class="center">
+  <tr>
+    <td><img src="assets/flux/lora/image_cfg.png"></td>
+    <td><img src="assets/flux/lora/image_ours.png"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>CFG</b></td>
+    <td align="center"><b>CFG-Zero*</b></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Prompt:</b> "aiyouxiketang, a man in armor with a beard and a beard."<br>
+      <b>Seed:</b> 3420021367<br>
+      <b>Lora: Shakker-Labs/FLUX.1-dev-LoRA-collections
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="assets/flux/lora/image_cfg_ds.png"></td>
+    <td><img src="assets/flux/lora/image_ours_ds.png"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>CFG</b></td>
+    <td align="center"><b>CFG-Zero*</b></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Prompt:</b> "Death Stranding Style. A solitary figure in a futuristic suit with a large, intricate backpack stands on a grassy cliff, gazing at a vast, mist-covered landscape composed of rugged mountains and low valleys beneath a rainy, overcast sky. Raindrops streak softly through the air, and puddles glisten on the uneven ground. Above the horizon, an ethereal, upside-down rainbow arcs downward through the gray clouds — its surreal, inverted shape adding an otherworldly touch to the haunting scene. A soft glow from distant structures illuminates the depth of the valley, enhancing the mysterious atmosphere. The contrast between the rain-soaked greenery and jagged rocky terrain adds texture and detail, amplifying the sense of solitude, exploration, and the anticipation of unknown adventures beyond the horizon."<br>
+      <b>Seed:</b> 875187112<br>
+      <b>Lora: https://civitai.com/models/46080/death-stranding
     </td>
   </tr>
 </table>
