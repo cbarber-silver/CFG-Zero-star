@@ -303,6 +303,31 @@ python models/hunyuan/t2v.py
   </tr>
 </table>
 
+### 4. SD3
+We used **stabilityai/stable-diffusion-3.5-large** for the following experiment.
+All images below were generated with the same seed on an H100 80G GPU.
+
+~~~bash
+python models/sd/infer.py
+~~~
+
+<table class="center">
+  <tr>
+    <td><img src="assets/sd3/output_cfg.png"></td>
+    <td><img src="assets/sd3/output_ours.png"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>CFG</b></td>
+    <td align="center"><b>CFG-Zero*</b></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Prompt:</b> "A capybara holding a sign that reads Hello World"<br>
+      <b>Seed:</b> 811677707
+    </td>
+  </tr>
+</table>
+
 ## Easy Implementation
 You can use this script to easily apply our method to any flow-matching-based model.
 ~~~python
