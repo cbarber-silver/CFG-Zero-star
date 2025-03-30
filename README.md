@@ -290,22 +290,6 @@ python models/flux/infer_lora.py
 
 <table class="center">
   <tr>
-    <td><img src="assets/flux/lora/image_cfg.png"></td>
-    <td><img src="assets/flux/lora/image_ours.png"></td>
-  </tr>
-  <tr>
-    <td align="center"><b>CFG</b></td>
-    <td align="center"><b>CFG-Zero*</b></td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <b>Prompt:</b> "aiyouxiketang, a man in armor with a beard and a beard."<br>
-      <b>Seed:</b> 3420021367<br>
-      <b>Lora: Shakker-Labs/FLUX.1-dev-LoRA-collections
-    </td>
-  </tr>
-
-  <tr>
     <td><img src="assets/flux/lora/image_cfg_ds.png"></td>
     <td><img src="assets/flux/lora/image_ours_ds.png"></td>
   </tr>
