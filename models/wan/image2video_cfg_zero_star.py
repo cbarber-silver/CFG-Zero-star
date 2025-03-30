@@ -332,6 +332,7 @@ class WanI2V:
 
                 alpha = optimized_scale(positive_flat,negative_flat)
                 alpha = alpha.view(batch_size, *([1] * (len(noise_pred_cond.shape) - 1)))
+                alpha = alpha.to(noise_pred_cond.dtype)
 
                 if i <= 1:
                     noise_pred = noise_pred_cond*0.

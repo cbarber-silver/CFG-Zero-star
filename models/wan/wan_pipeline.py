@@ -560,7 +560,7 @@ class WanPipeline(DiffusionPipeline, WanLoraLoaderMixin):
 
                         alpha = optimized_scale(positive_flat,negative_flat)
                         alpha = alpha.view(batch_size, *([1] * (len(noise_pred_text.shape) - 1)))
-
+                        alpha = alpha.to(noise_pred_text.dtype)
 
                         if (i <= zero_steps) and use_zero_init:
                             noise_pred = noise_pred_text*0.
