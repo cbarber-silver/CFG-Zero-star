@@ -62,9 +62,6 @@
 - Flux
     - [x] Text-to-Image (Guidance-distilled version)
     - [x] Lora
-- Lumina
-    - [ ] Lumina-Next
-    - [ ] Lumina-Image-2.0
 
 ## :astonished: Gallery
 
