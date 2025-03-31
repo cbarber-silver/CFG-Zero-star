@@ -120,6 +120,7 @@ Note: You may want to adjust the CUDA version [according to your driver version]
 
   ```bash
   pip install -r requirements.txt
+  apt install -y ffmpeg
   ```
 
 ## Local demo
