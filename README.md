@@ -237,8 +237,8 @@ All results shown below were generated using this script on an H100 80G GPU.
 
   <tr>
     <td><img src="assets/wan2.1/i2v_input.JPG" style="width:410px; height:auto;"></td>
-    <td><img src="assets/wan2.1/i2v-14B_832*480_cfg_3549111921.gif" style="width:410px; height:auto;"></td>
-    <td><img src="assets/wan2.1/i2v-14B_832*480_ours_3549111921.gif" style="width:410px; height:auto;"></td>
+    <td><img src="assets/wan2.1/i2v-14B_832_480_cfg_3549111921.gif" style="width:410px; height:auto;"></td>
+    <td><img src="assets/wan2.1/i2v-14B_832_480_ours_3549111921.gif" style="width:410px; height:auto;"></td>
   </tr>
   <tr>
     <td align="center"><b>Input Image</b></td>
