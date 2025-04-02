@@ -42,7 +42,8 @@
 **🧪 Usage Tip: Use both optimized-scale and zero-init together. Adjust the zero-init steps based on total inference steps — 4% is generally a good starting point.**
 
 ## 🔥 Update and News
-- [2025.4.1] 🔥 Qwen2.5-Omni is suppported now!
+- [2025.4.2] 🙌 Mentioned by [Wan2.1](https://github.com/Wan-Video/Wan2.1)!
+- [2025.4.1] Qwen2.5-Omni is suppported now!
 - [2025.3.30] Hunyuan is officially supported now!
 - [2025.3.29] Flux is officially supported now!
 - [2025.3.29] Both Wan2.1-14B I2V & T2V are now supported! 
