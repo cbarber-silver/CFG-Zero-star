@@ -397,9 +397,9 @@ python models/easycontrol/infer.py
     <td><img src="assets/easycontrol/image_CFG_zero_star.webp" style="width:410px; height:auto;"></td>
   </tr>
   <tr>
-    <td align="Source Image"><b>CFG</b></td>
-    <td align="CFG"><b>CFG</b></td>
-    <td align="CFG-Zeros*"><b>CFG-Zero*</b></td>
+    <td align="center"><b>Source Image</b></td>
+    <td align="center"><b>CFG</b></td>
+    <td align="center"><b>CFG-Zero*</b></td>
   </tr>
 </table>
 
